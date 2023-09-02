@@ -1,0 +1,13 @@
+name: comp30830
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - scikit-learn
+  - sqlalchemy
+  - mysqlclient
+  - ipython
+  - requests
+  - jupyter
+prefix: /Users/weetomlee/miniconda3/envs/comp30830

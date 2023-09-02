@@ -1,0 +1,11 @@
+name: comp30830
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - scikit-learn
+  - jupyterlab
+  - pandas
+  - sqlalchemy
+  - mysqlclient
+prefix: C:\Users\user\anaconda3\envs\comp30830

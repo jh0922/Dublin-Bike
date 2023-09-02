@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Setting character set of the page-->
+    <meta charset="UTF-8" />
+
+    <!-- Setting the title of the page-->
+    <title>Dublin Bike</title>
+
+    <!-- Setting CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/style_services.css"
+    />
+
+    <!-- Setting JavaScript-->
+    <script
+      type="text/javascript"
+      src= GOOGLE_API
+      defer
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript" src="../static/js/index.js"></script>
+    <script type="text/javascript" src="../static/js/chart.js"></script>
+    <script type="text/javascript" src="../static/js/dropdown.js"></script>
+    <script type="text/javascript" src="../static/js/predict.js"></script>
+    <script type="text/javascript" src="../static/js/datetime.js"></script>
+
+    <!--    Test Area-->
+    <!-- <script type="text/javascript" src="../static/js/googlechart.js"></script> -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/style_searchbox.css"
+    />
+  </head>
+  <body>
+    <div id="wholePage">
+      <nav>
+        <div class="menu">
+          <div class="logo">
+            <a href="#">Dublin Bikes</a>
+          </div>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li>
+              <a href="https://github.com/Minahhh666/Dublin-Bikes">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- FlexBox-->
+      <div class="wrapper">
+        <header class="header"></header>
+        <!--Import GoogleMap-->
+        <!-- <input id="search-box" type="text" placeholder="Search for a location" /> -->
+        <article class="main">
+          <!-- <input id="search-box" type="text" placeholder="Search for a location" /> -->
+          <div id="map"></div>
+        </article>
+        <! section for station dropdown and datetime bar>
+        <aside class="aside aside-2">
+          <form id="myForm">
+            <label for="dropdownPredict">When and where would you like to go?</label>
+            <div id="dropdownPredict">
+              <select id="selectDropdownPredictStart" required>
+                <option value="" selected disabled hidden>
+                  ---Please select your starting station---
+                </option>
+              </select>
+
+              <div>
+                <select id="selectDropdownPredictDest" required>
+                  <option value="" selected disabled hidden>
+                    ---Please select your destination station---
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <label for="travelMode">Please select the start and destination first!</label>
+            <label for="travelMode">Please then choose the way for navigation!</label>
+            <div>
+              <select id="travelMode">
+                <option value="BICYCLING">Bicycling</option>
+                <option value="TRANSIT">Public Transport</option>
+                <option value="WALKING">Walking</option>
+                <option value="DRIVING">Driving</option>
+              </select>
+
+            </div>
+
+            <label for="datetime">Please choose time for weather forcasting:</label>
+            <input
+              type="datetime-local"
+              id="datetime"
+              name="datetime"
+              required
+            />
+
+            <input type="submit" />
+            </form>
+
+          <!-- section for prediction result -->
+          <div id="prediction"></div>
+          <div id="predict_1"></div>
+          <div id="predict_2"></div>
+          <div id="meter"></div>
+          <div id="description"></div>
+          <img id="icon" />
+          <div id="dropdown"></div>
+
+          <!--        <br />-->
+
+          <!--section for history station dropdown-->
+          <label for="dropdownHistory"
+            >Select a station to see more detail:</label
+          >
+          <div id="dropdownHistory">
+            <select id="selectDropdownHistory">
+              <option selected disabled hidden>---</option>
+            </select>
+          </div>
+        </aside>
+        <!-- section for history data chart -->
+        <footer class="footer"><div id="myChart_7"></div></footer>
+        <footer class="footer"><div id="myChart_24"></div></footer>
+      </div>
+
+      <footer class="footer2">
+        <p>&copy; 2023 Dublin Bikes. All rights reserved.</p>
+      </footer>
+      <!--  Test JS-->
+      <!--    <div id="chart_div"></div>-->
+    </div>
+  </body>
+</html>

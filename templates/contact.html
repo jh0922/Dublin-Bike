@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Setting character set of the page-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Setting the title of the page-->
+    <title>Dublin Bikes - Contact Us</title>
+
+    <!-- Setting CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/style_contact.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigator-->
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a href="#">Dublin Bikes</a>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="https://github.com/Minahhh666/Dublin-Bikes">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Us section -->
+    <section class="contact-us">
+      <h1>Contact Us</h1>
+      <p>
+        If you have any questions or suggestions, feel free to contact us using
+        the form below.
+      </p>
+      <form action="/submit_contact_form" method="POST">
+        <div class="input-group">
+          <label for="name"><h2>Name</h2></label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="input-group">
+          <label for="email"><h2>Email</h2></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="message"><h2>Message</h2></label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Enter your message here."
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Dublin Bikes. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
